@@ -5,73 +5,23 @@
         "type": "Mage"
     },
     {
-        "name": "Ani",
-        "score": 0,
-        "type": "Archer"
-    },
-    {
-        "name": "Jhon",
-        "score": 0,
-        "type": "Monster"
-    },
-    {
-        "name": "Albert",
-        "score": 0,
-        "type": "Mage"
-    },
-    {
-        "name": "Rub",
-        "score": 0,
-        "type": "Mage"
-    },
-    {
-        "name": "Nona",
-        "score": 0,
-        "type": "Mage"
-    },
-    {
-        "name": "Valod",
-        "score": 0,
-        "type": "Archer"
-    },
-    {
-        "name": "Test",
-        "score": 0,
-        "type": "Mage"
-    },
-    {
-        "name": "bran",
-        "score": 0,
-        "type": "Mage"
-    },
-    {
         "name": "Dany",
+        "score": 1,
+        "type": "Mage"
+    },
+    {
+        "name": "Astx",
+        "score": 1,
+        "type": "Warrior"
+    },
+    {
+        "name": "Astx",
         "score": 0,
         "type": "Warrior"
     },
     {
-        "name": "Frida",
-        "score": 0,
-        "type": "Archer"
-    },
-    {
-        "name": "Frida",
-        "score": 0,
-        "type": "Monster"
-    },
-    {
-        "name": "Roman",
-        "score": 1,
-        "type": "Archer"
-    },
-    {
-        "name": "Vlad",
+        "name": "Aram",
         "score": 0,
         "type": "Mage"
-    },
-    {
-        "name": "arman",
-        "score": 1,
-        "type": "Archer"
     }
 ]

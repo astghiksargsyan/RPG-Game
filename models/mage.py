@@ -5,7 +5,7 @@ class Mage(Character):
     name = "Mage"
     def __init__(self):
         """Initialize the Mage character with health, attack, and defense values."""
-        super().__init__(2, 3, 3)
+        super().__init__(26, 12, 16)
     def attack_function(self):
         """Perform the Mage's attack action."""
         print("Mage casts a magic bolt!")

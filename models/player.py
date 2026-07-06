@@ -51,20 +51,22 @@ class Player():
     @staticmethod
     def battle(player, hero, enemy):
         while hero.is_alive() and enemy.is_alive():
+
             print("\n--- HERO TURN ---")
             Player.type_of_hero_action(hero)
             hero.attack_enemy(enemy)
             if not enemy.is_alive():
                 player.score += 1
-                print(f"The score of the player is: {player.score}")
-                print("Hero wins!")
+                print(f"{enemy.name} is defeated!")
+                print(f"Hero wins! Score: {player.score}")
                 break
             print("\n--- ENEMY TURN ---")
             enemy.choose_random_method()
             enemy.attack_enemy(hero)
+
             if not hero.is_alive():
-                print(f"The score of the player is: {player.score}")
-                print("Enemy wins!")
+                print(f"{hero.name} is defeated!")
+                print(f"Enemy wins! Score: {player.score}")
                 break
     @staticmethod
     def choose_hero(choice):

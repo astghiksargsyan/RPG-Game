@@ -5,7 +5,7 @@ class Warrior(Character):
     name = "Warrior"
     def __init__(self):
         """Initialize a character with health, attack, and defense values."""
-        super().__init__(3, 4, 3)
+        super().__init__(25, 18, 17)
     def attack_function(self):
         """Perform the Warrior's attack action."""
         print("Warrior swings a sword!")

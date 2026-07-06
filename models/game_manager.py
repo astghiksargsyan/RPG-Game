@@ -7,10 +7,8 @@ from models.warrior import Warrior
 from models.archer import Archer
 from models.enemy import Enemy
 from models.monster import Monster
-
 player = Player()
-
-heros = [Mage(), Warrior(), Archer()]
+heroes = [Mage(), Warrior(), Archer()]
 villains = [Enemy(), Monster()]
 
 class GameManager:
@@ -19,11 +17,12 @@ class GameManager:
         """Start function"""
         player.collect_player_data()
         if player.character_type == "hero":
-            enemy = GameManager.pc_choose_villain()
-            Player.battle(player, player.character, enemy)
+            hero = player.character
+            enemy = random.choice(villains)
         else:
-            hero = GameManager.pc_choose_hero()
-            Player.battle(player, hero, player.character)
+            hero = random.choice(heroes)
+            enemy = player.character
+        Player.battle(player, hero, enemy)
         save_to_file(player)
     @staticmethod
     def pc_choose_villain():
@@ -34,6 +33,6 @@ class GameManager:
     @staticmethod
     def pc_choose_hero():
         """Randomly choose hero"""
-        hero_choice = random.choice(heros)
+        hero_choice = random.choice(heroes)
         print(f"{hero_choice.name} is chosen")
         return hero_choice

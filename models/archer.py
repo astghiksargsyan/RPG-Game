@@ -4,7 +4,7 @@ class Archer(Character):
     name = "Archer"
     def __init__(self):
         """Initialize the Archer character with health, attack, and defense values."""
-        super().__init__(5, 7, 2)
+        super().__init__(25, 18, 17)
     def attack_function(self):
         """Perform the Archer's attack action."""
         print("Archer shoots an arrow!")

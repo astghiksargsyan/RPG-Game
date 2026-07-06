@@ -8,6 +8,8 @@ class Character:
         self.health = health
         self.attack = attack
         self.defense = defense
+        self.level = 1
+        self.exp = 0
         Character.total_characters_created += 1
     def is_alive(self):
         """Return True if the character is alive, otherwise False."""
@@ -17,7 +19,8 @@ class Character:
         self.health -= damage
     def attack_enemy(self, enemy):
         """Attack another character"""
-        damage = self.attack - enemy.defense
+        damage = (self.attack - enemy.defense) // 2
+        print(f"{self.name} attacks {enemy.name} | damage = {damage}")
         if damage > 0:
             enemy.take_damage(damage)
     def attack_function(self):
