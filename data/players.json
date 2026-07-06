@@ -68,5 +68,10 @@
         "name": "Vlad",
         "score": 0,
         "type": "Mage"
+    },
+    {
+        "name": "arman",
+        "score": 1,
+        "type": "Archer"
     }
 ]
