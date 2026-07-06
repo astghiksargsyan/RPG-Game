@@ -8,6 +8,7 @@ def load_players():
     except (FileNotFoundError, json.JSONDecodeError):
         return []
 def save_to_file(player):
+    """Store the player information to the JSON file"""
     players = load_players()
     players.append(player.create_player_dict())
     with open (PLAYERS_LIST, "w", encoding="utf-8") as f:

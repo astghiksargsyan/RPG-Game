@@ -9,7 +9,7 @@ class Character:
         self.attack = attack
         self.defense = defense
         self.level = 1
-        self.exp = 0
+
         Character.total_characters_created += 1
     def is_alive(self):
         """Return True if the character is alive, otherwise False."""

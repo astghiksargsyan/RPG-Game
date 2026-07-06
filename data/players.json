@@ -23,5 +23,10 @@
         "name": "Aram",
         "score": 0,
         "type": "Mage"
+    },
+    {
+        "name": "Roman",
+        "score": 1,
+        "type": "Mage"
     }
 ]

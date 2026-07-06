@@ -1,5 +1,4 @@
 from models.game_manager import GameManager
-from models.character import Character
 from models.archer import Archer
 from models.warrior import Warrior
 from models.mage import Mage

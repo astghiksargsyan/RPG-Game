@@ -26,32 +26,23 @@ class Player():
             print("Invalid choice. Please choose either a hero or a villain.")
         return self.character
     @staticmethod
-    def type_of_hero_action(hero):
+    def type_of_hero_action(char):
         """Handles player's chosen action during their turn."""
         type_of_action = input("Choose the type of action (attack / defense / special function): ").lower()
         if type_of_action == "attack":
-            hero.attack_function()
-            print(f"{hero.name} used attack!")
+            char.attack_function()
+            print(f"{char.name} used attack!")
         elif type_of_action == "defense":
-            hero.defense_function()
-            print(f"{hero.name} used defense!")
+            char.defense_function()
+            print(f"{char.name} used defense!")
         elif type_of_action == "special function":
-            hero.special_function()
-            print(f"{hero.name} used special function!")
+            char.special_function()
+            print(f"{char.name} used special function!")
         else:
             print("Invalid action.")  
-  
-    def create_player_dict(self):
-        """Create a dictionary representation of the player for JSON saving."""
-        tmp = {}
-        tmp["name"] = self.name
-        tmp["score"] = self.score
-        tmp["type"] = self.character.name
-        return tmp
     @staticmethod
     def battle(player, hero, enemy):
         while hero.is_alive() and enemy.is_alive():
-
             print("\n--- HERO TURN ---")
             Player.type_of_hero_action(hero)
             hero.attack_enemy(enemy)
@@ -63,7 +54,6 @@ class Player():
             print("\n--- ENEMY TURN ---")
             enemy.choose_random_method()
             enemy.attack_enemy(hero)
-
             if not hero.is_alive():
                 print(f"{hero.name} is defeated!")
                 print(f"Enemy wins! Score: {player.score}")
@@ -88,3 +78,10 @@ class Player():
              return Enemy()
         else:
             print("Invalid character choice.")
+    def create_player_dict(self):
+        """Create a dictionary representation of the player for JSON saving."""
+        tmp = {}
+        tmp["name"] = self.name
+        tmp["score"] = self.score
+        tmp["type"] = self.character.name
+        return tmp

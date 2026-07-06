@@ -17,10 +17,10 @@ class GameManager:
         """Start function"""
         player.collect_player_data()
         if player.character_type == "hero":
-            hero = player.character
+            hero = GameManager.pc_choose_villain()
             enemy = random.choice(villains)
         else:
-            hero = random.choice(heroes)
+            hero = GameManager.pc_choose_villain()
             enemy = player.character
         Player.battle(player, hero, enemy)
         save_to_file(player)
