@@ -28,5 +28,10 @@
         "name": "Roman",
         "score": 1,
         "type": "Mage"
+    },
+    {
+        "name": "Astx",
+        "score": 1,
+        "type": "Mage"
     }
 ]

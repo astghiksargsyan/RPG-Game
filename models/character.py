@@ -1,5 +1,7 @@
 import random
-class Character:
+from abc import ABC, abstractmethod
+
+class Character(ABC):
     """Base class for all game characters."""
     total_characters_created = 0
     name = "Character"
@@ -23,12 +25,15 @@ class Character:
         print(f"{self.name} attacks {enemy.name} | damage = {damage}")
         if damage > 0:
             enemy.take_damage(damage)
+    @abstractmethod
     def attack_function(self):
         """Perform the character's attack action."""
         print(self.health)
+    @abstractmethod
     def defense_function(self):
         """Perform the character's defense action."""
         print(self.health)
+    @abstractmethod
     def special_function(self):
         """Perform the character's unique special ability."""
         print(self.health)
