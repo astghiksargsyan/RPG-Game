@@ -42,7 +42,7 @@ class Player():
             print("Invalid action.")  
     @staticmethod
     def battle(player, hero, enemy):
-        while hero.is_alive() and enemy.is_alive():
+        while hero.is_alive() or enemy.is_alive():
             print("\n--- HERO TURN ---")
             Player.type_of_hero_action(hero)
             hero.attack_enemy(enemy)

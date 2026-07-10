@@ -3,9 +3,8 @@ from models.character import Character
 class Enemy(Character):
     """Class for Enemy characters."""
     name = "Enemy"
-    def __init__(self):
+    def __init__(self,  health = 15, attack = 7, defense = 6):
         """Initialize the Enemy character with health, attack, and defense values."""
-        super().__init__(27, 10, 27)
     def attack_function(self):
         """Perform the Enemy's attack action."""
         print("Enemy fires a gun!")

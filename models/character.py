@@ -7,24 +7,34 @@ class Character(ABC):
     name = "Character"
     def __init__(self, health, attack, defense):
         """Initialize a character with health, attack, and defense values."""
-        self.health = health
+        self.__health = health
         self.attack = attack
         self.defense = defense
         self.level = 1
-
         Character.total_characters_created += 1
+    @property
+    def health(self):
+        return self.__health
+    @health.setter
+    def health(self, value):
+        if 0 < value < 100:
+            self.__health = value
+        else:
+            print("Health must be between 0 and 99.")
+            return
     def is_alive(self):
         """Return True if the character is alive, otherwise False."""
-        return self.health > 0 
-    def take_damage(self, damage):
-        """Reduce health when taking damage"""
-        self.health -= damage
+        if self.health > 0 :
+            return True
+        else:
+            print("Game over!!")
+            return False
+
     def attack_enemy(self, enemy):
         """Attack another character"""
         damage = (self.attack - enemy.defense) // 2
         print(f"{self.name} attacks {enemy.name} | damage = {damage}")
-        if damage > 0:
-            enemy.take_damage(damage)
+    
     @abstractmethod
     def attack_function(self):
         """Perform the character's attack action."""

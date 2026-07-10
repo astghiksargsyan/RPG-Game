@@ -3,9 +3,8 @@ from models.character import Character
 class Monster(Character):
     """Class for Monster characters."""
     name = "Monster"
-    def __init__(self):
+    def __init__(self,  health = 35, attack = 7, defense = 6):
         """Initialize the Monster character with health, attack, and defense values."""
-        super().__init__(6, 9, 3)
     def attack_function(self):
         """Perform the Monster's attack action."""
         print("Monster slashes with sharp claws!")

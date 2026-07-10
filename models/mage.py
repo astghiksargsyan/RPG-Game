@@ -3,9 +3,8 @@ from models.character import Character
 class Mage(Character):
     """Class for Mage characters."""
     name = "Mage"
-    def __init__(self):
+    def __init__(self,  health = 25, attack = 7, defense = 6):
         """Initialize the Mage character with health, attack, and defense values."""
-        super().__init__(26, 12, 16)
     def attack_function(self):
         """Perform the Mage's attack action."""
         print("Mage casts a magic bolt!")
